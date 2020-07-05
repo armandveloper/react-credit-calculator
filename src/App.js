@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import CreditForm from './components/CreditForm';
+import Results from './components/Results';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [description, setDescription] = useState('');
+	const [price, setPrice] = useState(0);
+	const [paymentTerms, setPaymentTerms] = useState(1);
+	const [paymentType, setPayment] = useState('w');
+	const [results, setResults] = useState([]);
+
+	return (
+		<>
+			<h1 className="title">Control de crédito</h1>
+			<CreditForm
+				description={description}
+				setDescription={setDescription}
+				price={price}
+				setPrice={setPrice}
+				paymentTerms={paymentTerms}
+				setPaymentTerms={setPaymentTerms}
+				paymentType={paymentType}
+				setPayment={setPayment}
+				results={results}
+				setResults={setResults}
+			/>
+			<Results results={results} />
+		</>
+	);
 }
 
 export default App;
