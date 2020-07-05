@@ -2,7 +2,7 @@
 	"name": "credit-control",
 	"version": "0.1.0",
 	"private": true,
-	"homeage": "https://armcruz.github.io/react-credit-calculator",
+	"homepage": "https://armcruz.github.io/react-credit-calculator",
 	"dependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.5.0",
